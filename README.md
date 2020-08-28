@@ -1,3 +1,7 @@
+## Hello!
+
+I'm a recent Computer Science graduate, currently working at [KreatAR](https://www.kreatar.com/).
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/ShadmanQ/ShadmanQ.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
