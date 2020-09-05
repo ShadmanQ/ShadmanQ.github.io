@@ -167,3 +167,57 @@ header{
     top: 1em;
     z-index: 1000;
 }
+
+/* Css and Javscript work together
+====================================== */
+
+.nav-work .nav{
+	transform: translateX(0);
+}
+
+.nav-work .nav-toggle{
+	position: fixed;
+}
+ .nav-work .hamburger{
+ 	transform: rotate(.625turn);
+ }
+
+ .nav-work .hamburger::before{
+ 	transform: rotate(90deg) translateX(-6px);
+ }
+
+.nav-work .hamburger::after{
+	opacity: 0;
+}
+
+
+/*hamburger
+================ */
+.hamburger{
+	display: block;
+	position: relative;
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+	background: var(--clr-accent);
+	width: 2em;
+	height: 3px;
+	border-radius: 1em;
+	transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	
+}
+
+.hamburger::before{ top: 6px; }
+.hamburger::after{ bottom: 6px; }
