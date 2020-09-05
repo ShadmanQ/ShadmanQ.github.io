@@ -379,3 +379,117 @@ header{
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+
+/* Trial run with styling intro
+================================= */
+
+.hero-body {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+}
+
+.hero.is-small .hero-body {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+@media screen and (min-width: 769px), print {
+    .hero.is-medium .hero-body {
+        padding-bottom: 9rem;
+        padding-top: 9rem;
+    }
+}
+
+@media screen and (min-width: 769px), print {
+    .hero.is-large .hero-body {
+        padding-bottom: 18rem;
+        padding-top: 18rem;
+    }
+}
+
+.hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+}
+
+.hero.is-halfheight .hero-body > .container, .hero.is-fullheight .hero-body > .container, .hero.is-fullheight-with-navbar .hero-body > .container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+/* container
+================= */
+.container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.container.is-fluid {
+    max-width: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .container.is-widescreen {
+        max-width: 1152px;
+    }
+}
+
+@media screen and (max-width: 1407px) {
+    .container.is-fullhd {
+        max-width: 1344px;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .container {
+        max-width: 1344px;
+    }
+}
+
+
+/* hero footer
+================== */
+.hero-foot {
+    padding: 0rem 1.5rem;
+}
+
+.hero-foot img.is-bottom {
+    margin-bottom: -0.4rem;
+}
+
+@media screen and (min-width: 769px) {
+    .hero-foot img.is-bottom {
+        margin-bottom: -0.45rem;
+        max-width: 860px;
+    }
+}
+
+.hero-foot .mentor {
+    max-width: 480px !important;
+}
