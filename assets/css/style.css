@@ -179,7 +179,7 @@ header{
 	position: fixed;
 }
  .nav-work .hamburger{
- 	transform: rotate(.625turn);
+ 	transform: rotate(.400turn);
  }
 
  .nav-work .hamburger::before{
