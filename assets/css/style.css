@@ -62,3 +62,8 @@ default styling
 html{
     scroll-behavior: smooth;
 }
+
+body{
+    background: var(--clr-dark);
+    color: var(--clr-light);
+}
