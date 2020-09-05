@@ -244,3 +244,74 @@ header{
     position: relative;
     z-index: 2;
 }
+
+
+/* About me 
+==============*/
+.about-me{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about-me-img{
+	box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+	.about-me{
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		grid-template-areas: 
+		"title img"
+		"subtitle img"
+		"text img";
+		grid-column-gap: 2em;
+	}
+
+
+	.about-me-img{
+		grid-area: img;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+/* My Work 
+=================*/
+
+.my-work {
+	background-color: var(--clr-dark);
+	color: var(--clr-light);
+	text-align: center;
+}
+
+.portfolio{
+	display: grid;
+	/*column setup */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	
+}
+
+
+.portfolio__item {
+	background: var(--clr-accent);
+	overflow: hidden;
+}
+
+.portfolio__img {
+	transition: 
+		transform 750ms cubic-bezier(.5, 0, .5, 1),
+		opacity 250ms linear;
+}
+
+
+.portfolio__item:focus{
+	position: relative;
+	z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img{
+	transform: scale(1.2);
+	opacity: .5;
+}
