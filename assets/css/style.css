@@ -319,7 +319,7 @@ header{
 /* Footer
 ================= */
 .footer{
-    background: orange;
+    background: black;
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
