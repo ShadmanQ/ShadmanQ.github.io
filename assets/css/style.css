@@ -221,3 +221,26 @@ header{
 
 .hamburger::before{ top: 6px; }
 .hamburger::after{ bottom: 6px; }
+
+
+/* Intro section 
+==================*/
+
+.intro{
+	position: relative;
+}
+
+.intro-img{
+    box-shadow: var(--bs);
+}
+
+
+
+
+
+.intro-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+}
