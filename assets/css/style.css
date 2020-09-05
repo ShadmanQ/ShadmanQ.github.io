@@ -66,4 +66,6 @@ html{
 body{
     background: var(--clr-dark);
     color: var(--clr-light);
+    margin: 0;
+    
 }
