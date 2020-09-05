@@ -280,8 +280,8 @@ header{
 =================*/
 
 .my-work {
-	background-color: var(--clr-dark);
-	color: var(--clr-light);
+	background-color: var(--clr-light);
+	color: var(--clr-dark);
 	text-align: center;
 }
 
