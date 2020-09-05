@@ -25,14 +25,23 @@ default styling
     --fw-bold: 800;
 
     /* font-sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
 
     /* background-color */
+    --clr-light:#fff;
 
     /* text color */
+    --clr-dark: #303030;
 
     /* accent color */
+    --clr-accent: #228B22;
 
-    /* box shadow */
-
-    
+    /*box shadow*/
+	/* top, bottom, blurr, and rgba*/
+	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);    
 }
+
