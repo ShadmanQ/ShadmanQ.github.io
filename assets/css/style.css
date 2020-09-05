@@ -1,0 +1,531 @@
+/* Setting everything to zero
+(not allowing the browser to set
+default styling
+======================================= */
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+/* Importing Fonts
+====================== */
+/* Roboto Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+/* Setting Custom variables/properties
+========================================= */
+:root{
+    /* font family */
+    --ff-primary:'Roboto', serif;
+    --ff-secondary: 'Open Sans', serif;
+
+    /* font weight */
+    --fw-reg: 400;
+    --fw-bold: 800;
+
+    /* font-sizes */
+    --fs-h1: 3rem;
+    --fs-h2: 2.2rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    /* background-color */
+    --clr-light:#fff;
+
+    /* text color */
+    --clr-dark: #303030;
+
+    /* accent color */
+    --clr-accent: #228B22;
+
+    /*box shadow*/
+	/* top, bottom, blurr, and rgba*/
+	--bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+    0.125em 0.125em 0.25em rgba(0,0,0,.15);    
+}
+
+/* When the screen hit 800px or higher, change properties  */
+@media(min-width:800px){
+    root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.7rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.2rem;
+    }
+    
+}
+
+/* General styles
+============================= */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.7;
+}
+
+section{
+    /* setting top/bottom as well as left/right */
+    padding: 6em 2em;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* Typography
+========================== */
+h1,
+h2,
+h3 {
+	line-height: 1;
+	margin: 0;
+}
+
+h1{ font-size: var(--fs-h1); }
+h2{ font-size: var(--fs-h2); }
+h3{ font-size: var(--fs-h3); }
+
+
+
+/* header
+=========================== */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+/* PNG style */
+.logo{
+    max-width: 200 rem;
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.nav{
+    position: fixed;
+    background: var(--clr-dark);
+    color:var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    transform: translateX(100%);
+	transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.nav__list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+
+.nav__link{
+    color:inherit;
+    font-weight: var(--fw-bold);
+	font-size: var(--fs-h3);
+	text-decoration: none;
+}
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    max-width: 100px;
+
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
+
+/* Css and Javscript work together
+====================================== */
+
+.nav-work .nav{
+	transform: translateX(0);
+}
+
+.nav-work .nav-toggle{
+	position: fixed;
+}
+ .nav-work .hamburger{
+ 	transform: rotate(.625turn);
+ }
+
+ .nav-work .hamburger::before{
+ 	transform: rotate(90deg) translateX(-6px);
+ }
+
+.nav-work .hamburger::after{
+	opacity: 0;
+}
+
+
+/*hamburger
+================ */
+.hamburger{
+	display: block;
+	position: relative;
+}
+
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+	background: var(--clr-accent);
+	width: 2em;
+	height: 3px;
+	border-radius: 1em;
+	transition: transform 250ms ease-in-out;
+}
+
+
+.hamburger::before,
+.hamburger::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	
+}
+
+.hamburger::before{ top: 6px; }
+.hamburger::after{ bottom: 6px; }
+
+
+/* Intro section 
+==================*/
+
+.intro{
+	position: relative;
+}
+
+.intro-img{
+    box-shadow: var(--bs);
+}
+
+
+
+
+
+.intro-img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* About me 
+==============*/
+.about-me{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.about-me-img{
+	box-shadow: var(--bs);
+}
+
+@media (min-width: 600px){
+	.about-me{
+		display: grid;
+		grid-template-columns: 1fr 200px;
+		grid-template-areas: 
+		"title img"
+		"subtitle img"
+		"text img";
+		grid-column-gap: 2em;
+	}
+
+
+	.about-me-img{
+		grid-area: img;
+		position: relative;
+		z-index: 2;
+	}
+}
+
+/* My Work 
+=================*/
+
+.my-work {
+	background-color: var(--clr-light);
+	color: var(--clr-dark);
+	text-align: center;
+}
+
+.portfolio{
+	display: grid;
+	/*column setup */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	
+}
+
+
+.portfolio-item {
+	background: var(--clr-accent);
+	overflow: hidden;
+}
+
+.portfolio-img {
+	transition: 
+		transform 750ms cubic-bezier(.5, 0, .5, 1),
+		opacity 250ms linear;
+}
+
+
+.portfolio-item:focus{
+	position: relative;
+	z-index: 2;
+}
+
+.portfolio-img:hover,
+.portfolio-item:focus .portfolio-img{
+	transform: scale(1.2);
+	opacity: .5;
+}
+
+/* Footer
+================= */
+.footer{
+    background: black;
+    color: var(--clr-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+}
+
+.footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer-link{
+	font-weight: var(--fw-bold);
+}
+
+.footer-link:hover,
+.social-list-link:hover {
+	opacity: .7;
+}
+
+.footer-link:hover {
+	text-decoration: underline;
+}
+
+.social-list{
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin: 2em 0 0;
+	padding: 0;
+}
+
+.social-list-item{
+	margin: 0 .5em;
+}
+
+.social-list-link{
+	padding: .5em;
+}
+
+.footertext{
+	color: white;
+}
+
+/* Individual portfolio item styles
+======================================*/
+
+
+.portfolio-item-individual{
+	padding: 0 2em 2em;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.portfolio-item-individual p{
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Trial run with styling intro
+================================= */
+
+.hero.is-white .title {
+    color: #141c3a;
+}
+
+.has-text-centered {
+    text-align: center !important;
+}
+
+.hero-body {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 3rem 1.5rem;
+}
+
+.hero.is-small .hero-body {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+@media screen and (min-width: 769px), print {
+    .hero.is-medium .hero-body {
+        padding-bottom: 9rem;
+        padding-top: 9rem;
+    }
+}
+
+@media screen and (min-width: 769px), print {
+    .hero.is-large .hero-body {
+        padding-bottom: 18rem;
+        padding-top: 18rem;
+    }
+}
+
+.hero.is-halfheight .hero-body, .hero.is-fullheight .hero-body, .hero.is-fullheight-with-navbar .hero-body {
+    -webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+}
+
+.hero.is-halfheight .hero-body > .container, .hero.is-fullheight .hero-body > .container, .hero.is-fullheight-with-navbar .hero-body > .container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+/* container
+================= */
+.container {
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    margin: 0 auto;
+    position: relative;
+    width: auto;
+}
+
+.container.is-fluid {
+    max-width: none;
+    padding-left: 32px;
+    padding-right: 32px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 1215px) {
+    .container.is-widescreen {
+        max-width: 1152px;
+    }
+}
+
+@media screen and (max-width: 1407px) {
+    .container.is-fullhd {
+        max-width: 1344px;
+    }
+}
+
+@media screen and (min-width: 1216px) {
+    .container {
+        max-width: 1152px;
+    }
+}
+
+@media screen and (min-width: 1408px) {
+    .container {
+        max-width: 1344px;
+    }
+}
+
+/* column
+============ */
+.column {
+    display: block;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: 0.75rem;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+
+
+/* columns 
+============= */
+.columns {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+}
+
+/* columns centered */
+.columns.is-centered {
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+/* hero footer
+================== */
+.hero-foot {
+    padding: 0rem 1.5rem;
+}
+
+.hero-foot img.is-bottom {
+    margin-bottom: -0.4rem;
+}
+
+@media screen and (min-width: 769px) {
+    .hero-foot img.is-bottom {
+        margin-bottom: -0.45rem;
+        max-width: 860px;
+    }
+}
+
+.hero-foot .mentor {
+    max-width: 480px !important;
+}
