@@ -45,3 +45,20 @@ default styling
     0.125em 0.125em 0.25em rgba(0,0,0,.15);    
 }
 
+/* When the screen hit 800px or higher, change properties  */
+@media(min-width:800px){
+    root{
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.7rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.2rem;
+    }
+    
+}
+
+/* General styles
+============================= */
+
+html{
+    scroll-behavior: smooth;
+}
