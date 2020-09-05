@@ -17,9 +17,8 @@ default styling
 ========================================= */
 :root{
     /* font family */
-    --ff-primary:'Roboto Slab', serif;
+    --ff-primary:'Roboto', serif;
     --ff-secondary: 'Open Sans', serif;
-
 
     /* font weight */
     --fw-reg: 400;
