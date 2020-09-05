@@ -17,11 +17,13 @@ default styling
 ========================================= */
 :root{
     /* font family */
-    --ff-primary:'Roboto', sans-serif;
+    --ff-primary:'Roboto Slab', serif;
+    --ff-secondary: 'Open Sans', serif;
 
 
     /* font weight */
-    --fw-reg: 800;
+    --fw-reg: 400;
+    --fw-bold: 800;
 
     /* font-sizes */
 
