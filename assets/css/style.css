@@ -1,0 +1,36 @@
+/* Setting everything to zero
+(not allowing the browser to set
+default styling
+======================================= */
+*,
+*::before,
+*::after{
+	box-sizing: border-box;
+}
+
+/* Importing Fonts
+====================== */
+/* Roboto Regular 400 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+/* Setting Custom variables/properties
+========================================= */
+:root{
+    /* font family */
+    --ff-primary:'Roboto', sans-serif;
+
+
+    /* font weight */
+
+    /* font-sizes */
+
+    /* background-color */
+
+    /* text color */
+
+    /* accent color */
+
+    /* box shadow */
+
+    
+}
