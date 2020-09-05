@@ -319,7 +319,7 @@ header{
 /* Footer
 ================= */
 .footer{
-    background: black;
+    background: orange;
     color: var(--clr-accent);
     text-align: center;
     padding: 2.5em 0;
@@ -362,4 +362,20 @@ header{
 
 .footertext{
 	color: white;
+}
+
+/* Individual portfolio item styles
+======================================*/
+
+
+.portfolio-item-individual{
+	padding: 0 2em 2em;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.portfolio-item-individual p{
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
 }
