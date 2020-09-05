@@ -147,3 +147,23 @@ header{
 	font-size: var(--fs-h3);
 	text-decoration: none;
 }
+
+.nav__link:hover {
+    color: var(--clr-accent);
+}
+
+.nav-toggle {
+    position: fixed;
+    overflow: hidden;
+    z-index: 100;
+    max-width: 100px;
+
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    right: 1em;
+    top: 1em;
+    z-index: 1000;
+}
